@@ -1,0 +1,47 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+# Cursor AI Rules for AI Mindset Project
+
+## Project Guidelines
+
+Please refer to the `AGENTS.md` file in the project root for comprehensive project guidelines, architecture, and development patterns.
+
+## Key Rules
+
+1. **UI Components**: ALWAYS use shadcn/ui components for all UI elements. Never create custom UI components when a shadcn/ui equivalent exists.
+
+2. **Component Usage**:
+   - Import components from `@/components/ui/`
+   - Use `cn()` utility from `@/lib/utils` for className merging
+   - Add new components via: `npx shadcn@latest add [component-name]`
+
+3. **Tech Stack**:
+   - Next.js 15.5.2 with App Router
+   - React 19.1.1
+   - Firebase for auth & database
+   - TypeScript (strict mode)
+   - Tailwind CSS v4
+   - shadcn/ui for components
+   - Vercel AI SDK for AI features
+
+4. **File Structure**:
+   - Pages: `src/app/`
+   - Components: `src/components/`
+   - Firebase: `src/firebase/`
+   - Contexts: `src/context/`
+   - Utilities: `src/lib/`
+
+5. **Firebase Pattern**:
+   - All Firebase functions return `{result, error}` for consistent error handling
+   - Environment variables use `NEXT_PUBLIC_FIREBASE_` prefix
+   - Config stored in `.env.local`
+
+6. **Import Aliases**:
+   - Use `@/*` for imports (maps to `./src/*`)
+
+## Reference
+
+For detailed information, commands, and patterns, see: **[AGENTS.md](../../AGENTS.md)**
