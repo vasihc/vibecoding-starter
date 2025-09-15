@@ -1,142 +1,69 @@
-# Next.js 13 Firebase Стартовый шаблон
+# Next.js 13 Firebase Starter Template
 
-Это стартовый шаблон для создания приложений Next.js 13 с Firebase. Он предоставляет надежную основу для разработки современных веб-приложений с серверным рендерингом, аутентификацией и синхронизацией данных в реальном времени.
+[📄 Документация на русском](./README-RU.md)
 
-## Возможности
+A modern starter template for building Next.js 13 applications with Firebase, featuring authentication, real-time database, and AI-assisted development support.
 
-- Next.js 13: Создавайте мощные и масштабируемые React-приложения с серверным рендерингом.
-- Firebase: Используйте платформу Firebase для аутентификации, базы данных в реальном времени и облачных функций.
-- Tailwind CSS: Быстро создавайте пользовательские интерфейсы с помощью CSS-фреймворка utility-first.
-- Автоматическое разделение кода: Оптимизируйте производительность, разделяя JavaScript-код на более мелкие кэшируемые фрагменты.
-- Динамическая маршрутизация: Создавайте динамические маршруты для обработки различных страниц и контента.
-- Горячая замена модулей: Наслаждайтесь быстрой разработкой с горячей заменой модулей для мгновенных изменений кода.
-- Переменные окружения: Безопасно управляйте конфигурационными значениями с помощью переменных окружения.
-- ESLint и Prettier: Поддерживайте качество и согласованность кода с помощью ESLint и Prettier.
-
-## Предварительные требования
-
-Перед началом работы убедитесь, что у вас есть следующие компоненты:
-
-- Node.js 14 или выше
-- Менеджер пакетов npm или yarn
-
-## Начало работы
-
-- Чтобы начать новый проект с использованием этого шаблона, нажмите кнопку `Use this template`.
-- Перейдите в директорию проекта: `cd nextjs-13-firebase-starter`
-- Установите зависимости:
+## 🚀 Quick Start
 
 ```bash
-  npm install
-  # или
-  yarn install
+# Clone the template
+git clone https://github.com/vasihc/vibecoding-starter.git
+
+# Install dependencies
+npm install
+
+# Set up environment variables (see Firebase Setup)
+cp .env.example .env.local
+
+# Run development server
+npm run dev
 ```
 
-- Запустите сервер разработки:
+Open [http://localhost:3000](http://localhost:3000) to see your app.
+
+## 📚 Documentation
+
+- [Getting Started](./docs/en/getting-started.md) - Installation and setup
+- [Features](./docs/en/features.md) - Complete feature list
+- [Firebase Setup](./docs/en/firebase-setup.md) - Detailed Firebase configuration
+- [Project Structure](./docs/en/project-structure.md) - Directory organization
+- [Deployment](./docs/en/deployment.md) - Deploy to production
+- [AI Development](./AGENTS.md) - Working with AI assistants
+- [AI Dev Tasks](./docs/en/ai-dev-task.md) - Structured AI development workflow
+
+## ⚡ Key Features
+
+- **Next.js 15.5.2** with App Router
+- **Firebase** Authentication & Firestore
+- **TypeScript** with strict mode
+- **Tailwind CSS v4** + **shadcn/ui**
+- **AI-Ready** with vibecoding support
+
+## 🛠️ Tech Stack
+
+- React 19.1.1
+- Firebase 12.2.1
+- shadcn/ui components
+- Vercel AI SDK
+- ESLint & Prettier
+
+## 📦 Commands
 
 ```bash
-  npm run dev
-  # или
-  yarn dev
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run start    # Start production server
+npm run lint     # Run linting
 ```
 
-Откройте [http://localhost:3000](http://localhost:3000) в браузере, чтобы увидеть результат.
+## 🔗 Resources
 
-Вы можете начать редактировать страницу, изменяя `app/page.tsx`. Страница автоматически обновляется при редактировании файла.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Firebase Documentation](https://firebase.google.com/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [shadcn/ui](https://ui.shadcn.com)
 
-Этот проект использует [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) для автоматической оптимизации и загрузки Inter, пользовательского шрифта Google.
+## 📝 License
 
-## Узнать больше
-
-Чтобы узнать больше о Next.js, ознакомьтесь со следующими ресурсами:
-
-- [Документация Next.js](https://nextjs.org/docs) - узнайте о возможностях и API Next.js.
-- [Изучение Next.js](https://nextjs.org/learn) - интерактивное руководство по Next.js.
-
-Вы можете посетить [репозиторий Next.js на GitHub](https://github.com/vercel/next.js/) - ваши отзывы и вклад приветствуются!
-
-## Развертывание на Vercel
-
-Самый простой способ развернуть ваше приложение Next.js - использовать [платформу Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) от создателей Next.js.
-
-Ознакомьтесь с нашей [документацией по развертыванию Next.js](https://nextjs.org/docs/deployment) для получения дополнительной информации.
-
-## Настройка Firebase
-
-<https://console.firebase.google.com/>
-
-- Войдите с вашей учетной записью Google.
-- Нажмите кнопку `Go to console`.
-- Нажмите карточку `Add Project`.
-- Дайте вашему проекту имя.
-- Нажмите кнопку `Continue`.
-- Отключите `Google Analytics for this project` (если вы не хотите его использовать).
-- Нажмите кнопку `Create project`.
-- Нажмите на иконку веб-приложения для создания вашего веб-приложения. Появится всплывающее окно `Web`.
-- Зарегистрируйте приложение, дав ему имя, и нажмите кнопку `Register app`.
-- В директории с package.json введите в командной строке `npm i firebase`.
-- Скопируйте файл конфигурации. Создайте новый файл в `src` с именем `firebase.js`.
-- В корне проекта создайте файл с именем `.env`.
-- Убедитесь, что вы добавили `.env.local` в ваш `.gitignore`, чтобы не раскрывать ваши переменные в git-репозитории.
-- Следуйте [инструкциям здесь](https://nextjs.org/docs/pages/building-your-application/configuring/environment-variables#loading-environment-variables), чтобы добавить ваши переменные из firebase.js в этот файл.
-
-Пример...
-
-```md
-NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
-```
-
-- Создайте файл `env` и вставьте эти переменные с вашей собственной информацией.
-- Нажмите кнопку `Continue on console`
-- На главной странице вашего проекта выберите продукт для добавления в ваше приложение. Сначала нажмите на `Authentication`.
-- В разделе `Get started with Firebase Auth by adding your first sign-in method` выберите `Email/Password`.
-
-Теперь вы должны быть готовы к использованию Firebase.
-
-## Аутентификация
-
-- В директории `src/firebase` находится директория `auth`, содержащая логику для `входа` и `регистрации`.
-
-## Структура папок
-
-Структура папок проекта организована следующим образом:
-
-- `pages`: Содержит страницы Next.js для серверного рендеринга.
-- `components`: Содержит переиспользуемые React-компоненты.
-- `lib`: Включает утилитарные функции и модули.
-- `public`: Хранит статические ресурсы, такие как изображения, шрифты и таблицы стилей.
-- `styles`: Содержит глобальные стили и конфигурацию Tailwind CSS.
-- `firebase`: Содержит конфигурацию Firebase и связанные функции.
-
-Вы можете изменять или расширять структуру папок в соответствии с потребностями вашего проекта.
-Например, дополнительные подпапки могут быть организованы так:
-
-- `components`
-  - `UI`
-  - `custom`
-  - `partials`
-  - ...
-- `public`
-  - `assets`
-    - `images`
-    - `fonts`
-    - `gifs`
-  - ...
-- ...
-
-## Развертывание
-
-Для развертывания вашего приложения Next.js с Firebase следуйте инструкциям по развертыванию Firebase, специфичным для вашего варианта хостинга (Firebase Hosting, Cloud Functions и т.д.). Убедитесь, что настроили соответствующие переменные окружения для вашей продакшн-среды.
-
-
-
-Ресурсы
-
-- [Документация Next.js](https://nextjs.org/docs)
-- [Документация Firebase](https://firebase.google.com/docs)
-- [Документация Tailwind CSS](https://tailwindcss.com/docs)
+MIT

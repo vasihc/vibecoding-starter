@@ -96,3 +96,76 @@ The project uses shadcn/ui with the following configuration (`components.json`):
 - CSS variables enabled
 - Components path: `@/components`
 - Utils path: `@/lib/utils`
+
+## Working with AI Assistants (Vibecoding)
+
+### What is Vibecoding?
+
+Vibecoding is the practice of using AI assistants (like Claude, Cursor, GitHub Copilot) to accelerate development by leveraging natural language instructions and context-aware code generation. It's about "vibing" with AI to write code faster and more efficiently.
+
+### Setting Up Prompts
+
+#### Global Instructions (User-specific)
+Create `~/.claude/CLAUDE.md` or `~/.cursor/CURSOR.md` for personal preferences that apply to all projects:
+```markdown
+# My Coding Preferences
+- Prefer functional components in React
+- Use async/await over promises
+- Add comprehensive error handling
+- Write concise comments only when necessary
+```
+
+#### Project Instructions (Repository-specific)
+This file (`AGENTS.md`) serves as project-specific instructions that are checked into the repository. It ensures all team members and AI assistants follow the same conventions.
+
+### Best Practices for AI-Assisted Development
+
+1. **Be Specific with Instructions**
+   - Instead of: "Add authentication"
+   - Use: "Add Firebase email/password authentication with error handling and redirect to /dashboard on success"
+
+2. **Provide Context**
+   - Reference existing patterns in the codebase
+   - Mention specific files or components to modify
+   - Clarify the expected behavior and edge cases
+
+3. **Iterative Refinement**
+   - Start with high-level requirements
+   - Review generated code and request adjustments
+   - Test incrementally
+
+4. **Maintain Consistency**
+   - Always reference this AGENTS.md file for project conventions
+   - Use existing components and patterns
+   - Follow the established folder structure
+
+### Common Prompts for This Project
+
+```markdown
+# Adding a new page
+"Create a new page at /app/[page-name]/page.tsx using our existing layout patterns and shadcn/ui components"
+
+# Adding Firebase functionality
+"Add a Firestore collection for [model] with CRUD operations in src/firebase/firestore/, following the existing getData/addData patterns"
+
+# Building UI
+"Create a [component] using shadcn/ui components from our existing ui/ folder, styled with Tailwind CSS"
+
+# Authentication features
+"Add [feature] to the authentication flow, updating AuthContext and the relevant auth functions"
+```
+
+### AI Configuration Files
+
+- **CLAUDE.md** - Instructions for Claude (this project's root)
+- **AGENTS.md** - This file, providing comprehensive project context
+- **.cursorrules** - Cursor-specific instructions (if using Cursor)
+
+### Tips for Effective Vibecoding
+
+1. **Keep instructions updated** - Update this file when patterns change
+2. **Document decisions** - Explain why certain patterns are used
+3. **Include examples** - Show preferred code styles with examples
+4. **Version control prompts** - Track successful prompts for team reuse
+5. **Test AI output** - Always review and test generated code
+6. **Leverage context** - Reference existing code for consistency
