@@ -2,6 +2,12 @@
 
 This file provides guidance to cli agents when working with code in this repository.
 
+## Project Overview
+
+This is a Next.js 13 starter template for building applications with Firebase. It includes features like authentication, a real-time database, and AI-assisted development support. The project is built with TypeScript and uses Tailwind CSS for styling, along with shadcn/ui for components.
+
+The project structure follows the standard Next.js App Router conventions. The `src` directory contains the main application code, including pages, components, context, and Firebase integration logic.
+
 ## Commands
 
 ### Development
