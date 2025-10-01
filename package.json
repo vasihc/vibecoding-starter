@@ -16,7 +16,7 @@
     "@ai-sdk/react": "^2.0.26",
     "@radix-ui/react-scroll-area": "^1.2.10",
     "@radix-ui/react-slot": "^1.2.3",
-    "ai": "^5.0.44",
+    "ai": "^5.0.59",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "firebase": "^12.2.1",
